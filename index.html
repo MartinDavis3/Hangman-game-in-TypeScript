@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <title>
+            Hangman-game in Typescript
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/main.css">
+        <script type="text/javascript" src="./main.js" defer></script>
+    </head>
+    <body>
+        <h1 id="my-heading">Hangman Game in TypeScript</h1>
+        <article>
+            <section>
+                <form id="guess-form" action="#" method="GET">
+                    <h2>Give it your best shot!</h2>
+                    <label for="guess-input">
+                        Enter guess (letter or full word)
+                        <input id="guess-input" name="guess-input" type="text" onclick="ClearCommunication()" oninput="ClearCommunication()" autocomplete="off">
+                    </label>
+                    <input id="submit" type="submit" value="Try it !">
+                </form>
+            </section>
+            <section id="game-state">
+                <button id="new-game" onclick="startNewGame()">New Game</button>
+                <p id="guess-state">
+                
+                </p>
+                <p >
+                    Letters not in word:<span id="uncontained-letters"></span>                    
+                </p>
+                <p >
+                    You have <strong id="tries-left">0</strong> tries left
+                </p>
+                <p id="communication">
+                    Press New Game button to start game.
+                </p>
+            </section>
+        </article>
+    </body>
+</html>
